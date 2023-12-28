@@ -6,6 +6,7 @@ class Combinations():
     def __init__(self):
         self.cols = ['B01', 'B02', 'B03', 'B04', 'B05', 'B06', 'B07',
                      'B08', 'B09', 'B10', 'B11', 'B12', 'B13', 'B14']
+        self.max_num = 14
         
     def RandomCombination(self):
         self.comb_acc = []
@@ -19,4 +20,5 @@ class Combinations():
         
     
     def AllCombinations(self):
-        pass
+        self.comb = pd.DataFrame(combinations(range(1,26), self.max_num), columns = self.cols)
+        return self.comb
