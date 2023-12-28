@@ -8,7 +8,15 @@ class Combinations():
                      'B08', 'B09', 'B10', 'B11', 'B12', 'B13', 'B14']
         
     def RandomCombination(self):
-        pass
+        self.comb_acc = []
+        
+        while len(self.comb_acc) < 14:
+            self.num = randint(1,26)
+            if self.num not in self.comb_acc:
+                self.comb_acc.append(self.num)
+        
+        return sorted(self.comb_acc)
+        
     
     def AllCombinations(self):
         pass
