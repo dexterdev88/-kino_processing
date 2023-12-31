@@ -33,11 +33,9 @@ class PairNumbers():
         if isinstance(self.pairs_data, pd.DataFrame):
             self.pairs_acc = []
             self.pairs_cols = ['PARO2','PAR04','PAR06','PAR08','PAR10','PAR12','PAR14','PAR16','PAR18','PAR20','PAR22','PAR24','PAR_COUNT', 'PAR_SUM']
-            print('Buscando numeros pares')
             for row, value in data.iterrows():
                 aux = self.SubPairs(list(value))
                 self.pairs_acc.append(aux)
-            print('Finalizando')
             self.pairs_res = pd.DataFrame(self.pairs_acc)
             self.pairs_res.columns = self.pairs_cols
         
